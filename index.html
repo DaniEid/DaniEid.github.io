@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Timbl">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Timbl">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Timbl</title>
+  <link rel="manifest" href="manifest.json">
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZH0DTXLWJLqO_O0cI7iYSIyNnXCPBfX8"></script>
+
+
 </head>
-
 <body>
-    <img src="https://timble-media-dev.s3.amazonaws.com/top10berlin_restaurants_am_wasser_carlsophie_interior_smallcmarvin_pelny_0_791f0760_15f2_4d7b_9a30_d036f55b1ac7-10734dfa-f214-440c-a19d-71018168ff31.jpg">
 
-    <img src="https://elkaso-media-dev.s3.eu-west-1.amazonaws.com/public/18_5_2021_16_16_53file_01-cd2bfc0d-6aac-4989-958a-dcdb15966f25.png" alt="">
+<script src="assets/packages/libphonenumber_plugin/js/libphonenumber.js"></script>
+<script src="assets/packages/libphonenumber_plugin/js/stringbuffer.js"></script>
 
 
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=4001868841');
+      });
+    }
+  </script>
+
+
+  <script src="main.dart.js" type="application/javascript"></script>
 </body>
-
 </html>
